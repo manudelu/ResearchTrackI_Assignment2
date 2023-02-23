@@ -1,10 +1,10 @@
 # ResearchTrack_Assignment2
 Research Track I - Assignment II :  Implementation of an Action Server that Moves a Robot in the Environment
 
+It is the purpose of this assignment to develop a ROS package containing three ROS nodes that provide a way to interact with the environment presented in the assignment_2_2022 package.
+
 Create and setup a Catkin Workspace
 --------------------------------
-
-It is the purpose of this assignment to develop a ROS package containing three ROS nodes that provide a way to interact with the environment presented in the assignment_2_2022 package.
 
 Create a catkin (ROS) Workspace. A catkin workspace is a directory in which you can create or modify existing catkin packages. We will label our catkin workspace `catkin_ws`. To create the catkin workspace, type the following commands in the Terminal:
 
