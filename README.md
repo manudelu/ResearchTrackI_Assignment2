@@ -22,6 +22,7 @@ mkdir catkin_ws/src
 cd catkin_ws
 catkin_make
 ```
+This will allow us to create a new folder in the home directory called `catkin_ws` vy using the `mkdir` command. Then we create a source `src` folder inside the catkin workspace folder. Once done this, make sure to use the command `catkin_make` inside the `catkin_ws` folder in order to init the workspace.
 
 - Source the new setup.*sh file:
 
