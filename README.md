@@ -4,8 +4,54 @@ Research Track I - Assignment II :  Implementation of an Action Server that Move
 Create and setup a Catkin Workspace
 --------------------------------
 
-The ROS (or Catkin) Workspace will allow us to correctly organize and package our application. We start in our home directory, to create the workspace we simply create a new folder called `catkin_ws` with the command `mkdir`:
+It is the purpose of this assignment to develop a ROS package containing three ROS nodes that provide a way to interact with the environment presented in the assignment_2_2022 package.
+
+The simulation requires the following steps for running:
+
+- A ROS Noetic (ROS Noetic installation instructions)
+- Run the ROS core by executing this command in terminal:
 
 ```bash
-mkdir catkin_ws
+roscore
 ```
+
+- Create a ROS Workspace that will allow us to correctly organize and package our application. We start in our home directory and we type in the terminal:
+
+```bash
+mkdir catkin_ws/src
+cd catkin_ws
+catkin_make
+```
+
+- Source the new setup.*sh file:
+
+```bash
+source ~/catkin_ws/devel/setup.bash
+```
+
+- Move to the src folder of the workspace and then clone the package assignment_2_2022 which provides an implementation of an action server that moves a robot in the environment by implementing the bug0 algorithm:
+
+```bash
+git clone https://github.com/CarmineD8/assignment_2_2022
+```
+
+-Clone the package of my solution for this assignment:
+
+```bash
+git clone ---insert assignment---
+```
+
+- Then:
+
+```bash
+cd
+cd catkin_ws
+catkin_make
+```
+
+- Now, it is possible to run the whole project by running the launch file:
+
+```bash
+roslaunch rt1_2nd_assignment rt1_2nd_assignment.launch (da modificare)
+```
+
