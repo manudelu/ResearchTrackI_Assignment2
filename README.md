@@ -6,15 +6,6 @@ Create and setup a Catkin Workspace
 
 It is the purpose of this assignment to develop a ROS package containing three ROS nodes that provide a way to interact with the environment presented in the assignment_2_2022 package.
 
-The simulation requires the following steps for running:
-
-- A ROS Noetic (ROS Noetic installation instructions)
-- Run the ROS core by executing this command in terminal:
-
-```bash
-roscore
-```
-
 Create a catkin (ROS) Workspace. A catkin workspace is a directory in which you can create or modify existing catkin packages. We will label our catkin workspace `catkin_ws`. To create the catkin workspace, type the following commands in the Terminal:
 
 ```bash
@@ -50,7 +41,7 @@ Then, clone the package of my solution for this assignment:
 git clone ---insert assignment---
 ```
 
-- Then:
+Then, since inside the source folder there is new content, you need to type the command `catkin_make` again inside the `catkin_ws` folder:
 
 ```bash
 cd
@@ -58,7 +49,13 @@ cd catkin_ws
 catkin_make
 ```
 
-- Now, it is possible to run the whole project by running the launch file:
+Then start the ROS master by executing this command in the terminal:
+
+```bash
+roscore
+```
+
+Finally, open a new tab in the terminal and run the whole project by running the launch file:
 
 ```bash
 roslaunch rt1_2nd_assignment rt1_2nd_assignment.launch (da modificare)
