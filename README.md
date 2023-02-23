@@ -15,20 +15,24 @@ The simulation requires the following steps for running:
 roscore
 ```
 
-- Create a ROS Workspace that will allow us to correctly organize and package our application. We start in our home directory and we type in the terminal:
+Create a catkin (ROS) Workspace. A catkin workspace is a directory in which you can create or modify existing catkin packages. We will label our catkin workspace `catkin_ws`. To create the catkin workspace, type the following commands in the Terminal:
 
 ```bash
 mkdir catkin_ws/src
 cd catkin_ws
 catkin_make
 ```
-This will allow us to create a new folder in the home directory called `catkin_ws` vy using the `mkdir` command. Then we create a source `src` folder inside the catkin workspace folder. Once done this, make sure to use the command `catkin_make` inside the `catkin_ws` folder in order to init the workspace. Now, you can see that inside the `src` folder there are new folders called `devel` and `build`
 
-- Then, we will need to source the new `setup.bash` file inside the `devel` folder. In order to do this, it is necessary to go back in our home directory with the `cd` command and then type:
+This will allow us to create a new folder in the home directory called `catkin_ws` by using the `mkdir` command. Then we create a source `src` folder inside the catkin workspace folder. Once done, make sure to use the command `catkin_make` inside the `catkin_ws` folder in order to init the catkin workspace. If you view your current directory contents, you should now have the `devel` and `build` folders. Inside the `devel` folder there are now several `setup.*sh` files. Then, we will need to source the `setup.bash` file to overlay this workspace on top of your ROS environment. In order to do this, it is necessary to go back in our home directory with the `cd` command and then type:
 
 ```bash
-cd
 source ~/catkin_ws/devel/setup.bash
+```
+
+Remember to add this source command to your `.bashrc` file under the source line of the global ROS installation. This is important in order to use your code with ROS functionalities. In order to open the `.bashrc` file type the following command:
+
+```bash
+gedit ~/.bashrc
 ```
 
 - Move to the src folder of the workspace and then clone the package assignment_2_2022 which provides an implementation of an action server that moves a robot in the environment by implementing the bug0 algorithm:
