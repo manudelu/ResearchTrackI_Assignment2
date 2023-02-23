@@ -35,13 +35,16 @@ Remember to add this source command to your `.bashrc` file under the source line
 gedit ~/.bashrc
 ```
 
-- Move to the src folder of the workspace and then clone the package assignment_2_2022 which provides an implementation of an action server that moves a robot in the environment by implementing the bug0 algorithm:
+How to use the package
+--------------
+
+Move to the `src` folder of the catkin workspace and then clone the package `assignment_2_2022`, which provides an implementation of an action server that moves a robot in the environment by implementing the bug0 algorithm, by typing the command:
 
 ```bash
 git clone https://github.com/CarmineD8/assignment_2_2022
 ```
 
--Clone the package of my solution for this assignment:
+Then, clone the package of my solution for this assignment:
 
 ```bash
 git clone ---insert assignment---
