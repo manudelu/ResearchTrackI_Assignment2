@@ -15,8 +15,8 @@ A catkin (ROS) workspace is a directory in which you can create or modify existi
 
 ```bash
 mkdir catkin_ws
-mkdir src
 cd catkin_ws
+mkdir src
 catkin_make
 ```
 
