@@ -46,7 +46,7 @@ git clone https://github.com/CarmineD8/assignment_2_2022
 Then, clone the package of my solution for this assignment:
 
 ```bash
-git clone ---insert assignment---
+git clone https://github.com/manudelu/ResearchTrack_Assignment2.git
 ```
 
 Then, since inside the source folder there is new content, you need to type the command `catkin_make` again inside the `catkin_ws` folder:
