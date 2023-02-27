@@ -11,7 +11,7 @@ It is the purpose of this assignment to develop a ROS package containing three R
 Create and setup a Catkin Workspace
 --------------------------------
 
-Create a catkin (ROS) Workspace. A catkin workspace is a directory in which you can create or modify existing catkin packages. We will label our catkin workspace `catkin_ws`. To create the catkin workspace, type the following commands in the Terminal:
+A catkin (ROS) workspace is a directory in which you can create or modify existing catkin packages. We will label our catkin workspace `catkin_ws`. To create the catkin workspace, type the following commands in the Terminal:
 
 ```bash
 mkdir catkin_ws/src
