@@ -1,5 +1,5 @@
-# ResearchTrack_Assignment2
-Research Track I - Assignment II : ROS Robot Simulator with Gazebo Simulation Environment
+# Research Track I - Second Assignment
+ROS Robot Simulator with Gazebo Simulation Environment - Delucchi Manuel (S4803977)
 ----------------------------------------------------------------------------------------------
 
 It is the purpose of this assignment to develop a ROS package containing three ROS nodes that provide a way to interact with the environment presented in the assignment_2_2022 package.
