@@ -3,6 +3,9 @@ Research Track I - Second Assignment
 ROS Robot Simulator with Gazebo Simulation Environment - Delucchi Manuel (S4803977)
 ================================
 
+Project Description
+----------------------
+
 It is the purpose of this assignment to develop a ROS package containing three ROS nodes that provide a way to interact with the environment presented in the assignment_2_2022 package.
 
 Create and setup a Catkin Workspace
@@ -62,4 +65,5 @@ Finally, open a new tab in the terminal and run the whole project by running the
 ```bash
 roslaunch rt1_2nd_assignment rt1_2nd_assignment.launch (da modificare)
 ```
-
+Pseudo-Code
+----------------------
