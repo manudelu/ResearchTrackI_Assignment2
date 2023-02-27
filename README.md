@@ -14,7 +14,8 @@ Create and setup a Catkin Workspace
 A catkin (ROS) workspace is a directory in which you can create or modify existing catkin packages. We will label our catkin workspace `catkin_ws`. To create the catkin workspace, type the following commands in the Terminal:
 
 ```bash
-mkdir catkin_ws/src
+mkdir catkin_ws
+mkdir src
 cd catkin_ws
 catkin_make
 ```
