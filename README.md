@@ -64,7 +64,7 @@ cd catkin_ws
 catkin_make
 ```
 
-Finally, start the ROS master by executing this command in the terminal:
+Finally, start the ROS master by executing this command in the terminal (it is required to have ROS installed to use these functionalities):
 
 ```bash
 roscore
