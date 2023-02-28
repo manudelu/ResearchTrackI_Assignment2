@@ -6,7 +6,14 @@ ROS Robot Simulator with Gazebo Simulation Environment - Delucchi Manuel (S48039
 Project Description
 ----------------------
 
-It is the purpose of this assignment to develop a ROS package containing three ROS nodes that provide a way to interact with the environment presented in the assignment_2_2022 package.
+It is the purpose of this assignment to develop a ROS package containing three ROS nodes that provide a way to interact with the environment presented in the `assignment_2_2022` package. 
+
+The aim of the assignment is to create a new package, in which the following nodes will be developed:
+- Node A: A node that implements an action client, allowing the user to set a target (x, y) or to cancel it. The node also publishes the robot position and velocity as a custom message (x, y, vel_x, vel_z), by relying on the values published on the topic /odom;
+- Node B: A service node that, when called, prints the number of goals reached and cancelled;
+- Node C: A node that subscribes to the robot’s position and velocity (using the custom message) and prints the distance of the robot from the target and the robot’s average speed.
+
+Then, it is asked to create a launch file to start the whole simulation.
 
 Create and setup a Catkin Workspace
 --------------------------------
