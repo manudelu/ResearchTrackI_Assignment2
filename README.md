@@ -78,3 +78,5 @@ roslaunch my_robot_controller assignment2.launch
 
 Flow Chart for Node A: User Interface
 ----------------------
+
+![](my_robot_controller/images/FlowChart.png)
