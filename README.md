@@ -76,5 +76,5 @@ Open a new tab in the terminal and run the whole project by running the launch f
 roslaunch my_robot_controller assignment2.launch 
 ```
 
-Pseudo-Code
+Flow Chart for Node A: User Interface
 ----------------------
