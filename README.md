@@ -8,7 +8,7 @@ Project Description
 
 It is the purpose of this assignment to develop a ROS package containing three ROS nodes that provide a way to interact with the environment presented in the `assignment_2_2022` package. 
 
-The aim of the assignment is to create a new package, in which the following nodes will be developed:
+The aim of the assignment is to create a package, in which the following nodes will be developed:
 - Node A: A node that implements an action client, allowing the user to set a target (x, y) or to cancel it. The node also publishes the robot position and velocity as a custom message (x, y, vel_x, vel_z), by relying on the values published on the topic /odom;
 - Node B: A service node that, when called, prints the number of goals reached and cancelled;
 - Node C: A node that subscribes to the robot’s position and velocity (using the custom message) and prints the distance of the robot from the target and the robot’s average speed.
@@ -44,19 +44,21 @@ gedit ~/.bashrc
 How to run the simulation
 -------------------------
 
-Move to the `src` folder of the catkin workspace and then clone the package `assignment_2_2022`, which provides an implementation of an action server that moves a robot in the environment by implementing the bug0 algorithm, by typing the command:
+Start by installing the xterm library. This can be done running on terminal the following code:
 
 ```bash
-git clone https://github.com/CarmineD8/assignment_2_2022
+sudo apt-get install xterm
 ```
 
-Then, clone the package of my solution for this assignment:
+`Note`: xterm is the standard terminal emulator in the Unix-like environment. A user can have multiple xterm sessions started on one or more displays, which provide an input/output system for the processes launched.
+
+From the root folder move to the `src` folder of the catkin workspace and then clone the package `assignment_2_2022` by typing the command:
 
 ```bash
-git clone https://github.com/manudelu/ResearchTrack_Assignment2.git
+git clone https://github.com/manudelu/ResearchTrackI_Assignment2.git
 ```
 
-Then, since inside the source folder there is new content, you need to type the command `catkin_make` again inside the `catkin_ws` folder:
+Then, since inside the source folder there is new content, you need to type the command `catkin_make` inside the `catkin_ws` folder:
 
 ```bash
 cd
@@ -73,7 +75,7 @@ roscore
 Open a new tab in the terminal and run the whole project by running the launch file:
 
 ```bash
-roslaunch my_robot_controller assignment2.launch 
+roslaunch assignment_2_2022 assignment1.launch 
 ```
 
 Flow Chart for Node A: User Interface
