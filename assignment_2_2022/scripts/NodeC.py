@@ -5,31 +5,35 @@ import math
 
 from assignment_2_2022.msg import RobotMsg
 
-def callback_subscriber(data):
+
+def callback_subscriber(msg):
+
 	# Get the desired position from the ROS parameter server
 	des_pos_x = rospy.get_param("des_pos_x")
 	des_pos_y = rospy.get_param("des_pos_y")
 
 	# Calculate the distance between the current and the desired position
-	distance = math.sqrt(pow(des_pos_x - data.x, 2) + (pow(des_pos_y - data.y, 2))
-	
+	distance = math.sqrt(pow(des_pos_x - msg.x, 2) + pow(des_pos_y - msg.y, 2))
+		
 	# Calculate the velocity   
-	vel = math.sqrt(pow(data.vel_x, 2) + pow(data.vel_y, 2))
-    
+	vel = math.sqrt(pow(msg.vel_x, 2) + pow(msg.vel_y, 2))
+		
 	# Print distance and velocity
-	rospy.loginfo("Distance to the goal: ", distance)
-	rospy.loginfo("Average speed: ", vel)
-    
+	print("Distance to the goal: ", distance)
+	print("Average speed: ", vel)  
 
 if __name__ == '__main__':
-
+	
 	# Init the Node
 	rospy.init_node("NodeC")
 	
-	# Subscribe to the RobotMsg topic and pass the info to the callback function
-	rospy.Subscriber('my_pos_and_my_vel', RobotMsg, callback_subscriber)
+	# Setting the rate of publishing chosen in launch file
+	freq = rospy.get_param("freq")
+	rate = rospy.Rate(freq)
 	
-	rate = rospy.Rate(10)
+	# Subscribe to the RobotMsg topic and pass the info to the callback function
+	rospy.Subscriber('/pos_vel', RobotMsg, callback_subscriber)
+	
 	while not rospy.is_shutdown():
 		rate.sleep()
 	

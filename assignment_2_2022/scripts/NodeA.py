@@ -31,7 +31,7 @@ def callback(msg):
     
 	# Publish the message
 	if not rospy.is_shutdown():
-		my_pub.publish(my_custom_msg)
+		pub.publish(my_custom_msg)
 
 def set_target():
 	"""
@@ -70,13 +70,14 @@ def cancel_target():
 	"""
 	# If there is an active goal then cancel it
 	if client.get_state() == actionlib.GoalStatus.ACTIVE:
-    	client.cancel_goal()
-    	print("The target has been cancelled successfully!!")
+		client.cancel_goal()
+		print("The target has been cancelled successfully!!")
 	# If there is no active goal then display an error message
 	else:
 		print("Error. There's no target to cancel.")
         
 	# Back to the interface function
+	rospy.sleep(2)
 	user_interface()
 
 def user_interface():
@@ -88,14 +89,7 @@ def user_interface():
 	
 	Args: None
 	"""
-	# Create a new client
-	client = actionlib.SimpleActionClient('/reaching_goal', assignment_2_2022.msg.PlanningAction)	
-    
-	# Wait for the server to be ready to receive the goal 
-	client.wait_for_server()
-	
-	# Clean the screen
-	rospy.sleep(2) 
+	# Clean the screen 
 	os.system('clear')
 	
 	print("###############################################\n")    
@@ -115,7 +109,9 @@ def user_interface():
 	elif (choice == "2"):
 		cancel_target()     	
 	elif (choice == "3"):
-		rospy.signal_shutdown("Exiting...")    
+		print("Shutdown!! You'll no longer be able to interact with the interface!")
+		rospy.sleep(1)
+		exit()  
 	else:
 		print("Wrong choise!! Try Again...")
 		user_interface()      
@@ -132,8 +128,14 @@ if __name__ == '__main__':
 	# Define a subscriber which listen to the Odometry message and calls the callback function
 	rospy.Subscriber("/odom", Odometry, callback)
     
+    # Create a new client
+	client = actionlib.SimpleActionClient('/reaching_goal', assignment_2_2022.msg.PlanningAction)	
+    
+	# Wait for the server to be ready to receive the goal 
+	client.wait_for_server()
+    
 	# Call the UI function
 	user_interface()
 	
 	# Spin() keeps python from exiting until the ROS node is stopped
-	rospt.spin()
+	#rospt.spin()
