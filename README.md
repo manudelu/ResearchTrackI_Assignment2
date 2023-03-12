@@ -84,7 +84,7 @@ Once the program has run, two screens will pop up in order to see the robot and 
 
 ![](assignment_2_2022/images/Rviz.PNG)
 
-* Gazebo: With Gazebo you are able to create a 3D scenario on your computer with robots, obstacles and many other objects.
+* Gazebo. simulation environment used to create a 3D scenario with robots, obstacles and many other objects.
 
 ![](assignment_2_2022/images/World.PNG)
 
