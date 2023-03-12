@@ -86,7 +86,7 @@ Once the program has run, two screens will pop up in order to see the robot and 
 
 * Gazebo: With Gazebo you are able to create a 3D scenario on your computer with robots, obstacles and many other objects.
 
-![](assignment_2_2022/images/world.PNG)
+![](assignment_2_2022/images/World.PNG)
 
 Furthermore, three more windows will pop up. The user can interact with them in order to set or cancel a target for the robot in the simulation environment (NodeA), to see the number of goals reached and cancelled (NodeB) and to see far the robot is from the target and at what speed it is moving (NodeC).
 
