@@ -4,7 +4,7 @@ import rospy
 import os
 import actionlib
 import actionlib.msg
-import assignment_2_2022.msg
+import assignment_2_2022
 import assignment_2_2022.msg
 
 from std_srvs.srv import *
@@ -58,6 +58,7 @@ def set_target():
 	print("The target has been successfully sent to the sever!!")
  
 	# Back to the interface function
+	rospy.sleep(3)
 	user_interface()	
 
 def cancel_target():
@@ -110,10 +111,11 @@ def user_interface():
 		cancel_target()     	
 	elif (choice == "3"):
 		print("Shutdown!! You'll no longer be able to interact with the interface!")
-		rospy.sleep(1)
+		rospy.sleep(2)
 		exit()  
 	else:
 		print("Wrong choise!! Try Again...")
+		rospy.sleep(2)
 		user_interface()      
 	
 if __name__ == '__main__':
@@ -136,6 +138,3 @@ if __name__ == '__main__':
     
 	# Call the UI function
 	user_interface()
-	
-	# Spin() keeps python from exiting until the ROS node is stopped
-	#rospt.spin()
