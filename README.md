@@ -88,7 +88,7 @@ Once the program has run, two screens will pop up in order to see the robot and 
 
 ![](assignment_2_2022/images/World.PNG)
 
-Furthermore, three more windows will pop up. The user can interact with them in order to set or cancel a target for the robot in the simulation environment (NodeA), to see the number of goals reached and cancelled (NodeB) and to see far the robot is from the target and at what speed it is moving (NodeC).
+Furthermore, three more windows will pop up. The user can interact with them in order to set or cancel a target for the robot in the simulation environment (NodeA), to see the number of goals reached and cancelled (NodeB) and to see how far the robot is from the target and at what speed it is moving (NodeC).
 
 ![](assignment_2_2022/images/NodeB.PNG)
 ![](assignment_2_2022/images/NodeC.PNG)
