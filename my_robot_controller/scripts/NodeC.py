@@ -14,11 +14,11 @@ def callback_subscriber(data):
 	distance = math.sqrt(pow(des_pos_x - data.x, 2) + (pow(des_pos_y - data.y, 2))
 	
 	# Calculate the velocity   
-    vel = math.sqrt(pow(data.v_x, 2) + pow(data.v_y, 2))
+	vel = math.sqrt(pow(data.v_x, 2) + pow(data.v_y, 2))
     
-    # Print distance and velocity
-    rospy.loginfo("Distance to the goal: ", distance)
-    rospy.loginfo("Average speed: ", vel)
+	# Print distance and velocity
+	rospy.loginfo("Distance to the goal: ", distance)
+	rospy.loginfo("Average speed: ", vel)
     
 
 if __name__ == '__main__':
