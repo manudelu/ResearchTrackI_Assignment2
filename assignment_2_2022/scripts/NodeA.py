@@ -97,7 +97,7 @@ def user_interface():
 	print("##          Robot Control Interface          ##\n")
 	print("###############################################\n")
 	print("## -------> Select 1: Target Position        ##\n")
-	print("## -------> Select 2: Cancel                 ##\n")
+	print("## -------> Select 2: Cancel Position        ##\n")
 	print("## -------> Select 3: Exit                   ##\n")
 	print("###############################################\n") 
         
@@ -130,7 +130,7 @@ if __name__ == '__main__':
 	# Define a subscriber which listen to the Odometry message and calls the callback function
 	rospy.Subscriber("/odom", Odometry, callback)
     
-    # Create a new client
+	# Create a new client
 	client = actionlib.SimpleActionClient('/reaching_goal', assignment_2_2022.msg.PlanningAction)	
     
 	# Wait for the server to be ready to receive the goal 
