@@ -11,7 +11,7 @@ It is the purpose of this assignment to develop a ROS package containing three R
 The aim of the assignment is to create a package, in which the following nodes will be developed:
 - Node A: A node that implements an action client, allowing the user to set a target (x, y) or to cancel it. The node also publishes the robot position and velocity as a custom message (x, y, vel_x, vel_z), by relying on the values published on the topic /odom;
 - Node B: A service node that, when called, prints the number of goals reached and cancelled;
-- Node C: A node that subscribes to the robot’s position and velocity (using the custom message) and prints the distance of the robot from the target and the robot’s average speed.
+- Node C: A node that subscribes to the robot’s position and velocity (using the custom message) and prints the distance of the robot from the target and the robot’s average speed. The frequency at which the information is published can be set via a parameter in the launch file.
 
 Then, it is asked to create a launch file to start the whole simulation.
 
@@ -94,7 +94,7 @@ Furthermore, three more windows will pop up. The user can interact with them in 
 ![](assignment_2_2022/images/NodeC.PNG)
 ![](assignment_2_2022/images/NodeA.PNG)
 
-Flow Chart for Node A: User Interface
+Structure of Node A: User Interface
 ----------------------
 
-![](my_robot_controller/images/FlowChart.png)
+
