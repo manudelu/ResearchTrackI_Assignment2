@@ -97,4 +97,4 @@ Furthermore, three more windows will pop up. The user can interact with them in 
 Structure of Node A: User Interface
 ----------------------
 
-
+![](assignment_2_2022/images/FlowChart.png)
