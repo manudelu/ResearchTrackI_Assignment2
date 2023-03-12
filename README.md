@@ -78,6 +78,13 @@ Open a new tab in the terminal and run the whole project by running the launch f
 roslaunch assignment_2_2022 assignment1.launch 
 ```
 
+Once the program has run, two screens will pop up in order to see the robot and the environment:
+
+* Rviz (ROS visualization), is a powerful 3D visualization tool for ROS. It allows the user to view the simulated robot model, log sensor information from the robot's sensors, and replay the logged sensor information;
+* Gazebo: With Gazebo you are able to create a 3D scenario on your computer with robots, obstacles and many other objects.
+
+Furthermore, two more windows will pop up. The user can interact with them in order to set or cancel a target for the robot in the simulation environment and to see information about how far it is from the target and at what speed it is moving.
+
 Flow Chart for Node A: User Interface
 ----------------------
 
