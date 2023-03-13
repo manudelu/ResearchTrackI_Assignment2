@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespace_node_c" kind="namespace" language="Python">
+    <compoundname>NodeC</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespace_node_c_1a2b08697a8aa7484008365a42a77c4b2f" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>NodeC.freq</definition>
+        <argsstring></argsstring>
+        <name>freq</name>
+        <initializer>=  rospy.get_param(&quot;freq&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/catkin_ws/src/assignment_2_2022/scripts/NodeC.py" line="53" column="1" bodyfile="/root/catkin_ws/src/assignment_2_2022/scripts/NodeC.py" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_node_c_1aaab335539ffaa7783d0786bfd99dddd8" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>NodeC.rate</definition>
+        <argsstring></argsstring>
+        <name>rate</name>
+        <initializer>=  rospy.Rate(freq)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/catkin_ws/src/assignment_2_2022/scripts/NodeC.py" line="54" column="1" bodyfile="/root/catkin_ws/src/assignment_2_2022/scripts/NodeC.py" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespace_node_c_1a64034af6d441a926adcf3583e65621ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def NodeC.callback_subscriber</definition>
+        <argsstring>(msg)</argsstring>
+        <name>callback_subscriber</name>
+        <param>
+          <type>msg</type>
+          <defname>msg</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Function that calculates the distance between the robot and the goal and the speed of the robot
+
+*Args*: 
+*msg(RobotMsg)*: Contains the coordinates and velocity of the robot</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/catkin_ws/src/assignment_2_2022/scripts/NodeC.py" line="25" column="1" bodyfile="/root/catkin_ws/src/assignment_2_2022/scripts/NodeC.py" bodystart="25" bodyend="46"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>.. module:: NodeC
+   :platform: Unix
+   :synopsis: Python module for the second assignment of Research Track I course
+   
+.. moduleauthor:: Manuel Delucchi
+
+A more detailed description of the node:
+
+This node prints the robot speed and the distance from the desired target
+
+Subsribes to:
+/pos_vel</verbatim> </para>
+    </detaileddescription>
+    <location file="/root/catkin_ws/src/assignment_2_2022/scripts/NodeC.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

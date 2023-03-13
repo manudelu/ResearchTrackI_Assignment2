@@ -1,0 +1,148 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespace_node_a" kind="namespace" language="Python">
+    <compoundname>NodeA</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespace_node_a_1aadf828971e4ca1ce9544c7829527e320" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>NodeA.pub</definition>
+        <argsstring></argsstring>
+        <name>pub</name>
+        <initializer>=  rospy.Publisher(&quot;/pos_vel&quot;, RobotMsg, queue_size = 1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/catkin_ws/src/assignment_2_2022/scripts/NodeA.py" line="172" column="1" bodyfile="/root/catkin_ws/src/assignment_2_2022/scripts/NodeA.py" bodystart="172" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_node_a_1a83e4ae7b0ab7d2630acec7baf42c4e20" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>NodeA.client</definition>
+        <argsstring></argsstring>
+        <name>client</name>
+        <initializer>=  actionlib.SimpleActionClient(&apos;/reaching_goal&apos;, assignment_2_2022.msg.PlanningAction)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/catkin_ws/src/assignment_2_2022/scripts/NodeA.py" line="178" column="1" bodyfile="/root/catkin_ws/src/assignment_2_2022/scripts/NodeA.py" bodystart="178" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespace_node_a_1ac3f60cd6f04b0f6106fddc460e776610" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def NodeA.callback</definition>
+        <argsstring>(msg)</argsstring>
+        <name>callback</name>
+        <param>
+          <type>msg</type>
+          <defname>msg</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Callback function to publish position and velocity of the robot taken from */odom* topic
+
+*Args*: 
+*msg(Odometry)*: Contains the odometry of the robot</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/catkin_ws/src/assignment_2_2022/scripts/NodeA.py" line="35" column="1" bodyfile="/root/catkin_ws/src/assignment_2_2022/scripts/NodeA.py" bodystart="35" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_node_a_1af40493241c372d395d0c7e9edc0febff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def NodeA.get_target</definition>
+        <argsstring>()</argsstring>
+        <name>get_target</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>    Function that ask the user to set the x and y position of the target and check whether the input is valid
+    
+    *Args*: None</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/catkin_ws/src/assignment_2_2022/scripts/NodeA.py" line="58" column="1" bodyfile="/root/catkin_ws/src/assignment_2_2022/scripts/NodeA.py" bodystart="58" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_node_a_1afae969f489a8ca97e10a0895e7574523" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def NodeA.set_target</definition>
+        <argsstring>()</argsstring>
+        <name>set_target</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Function that allows the user to set the coordinates (x, y) of the target position that
+the robot must reach inside the simulation environment and send the target (goal) to the action server
+
+*Args*: None
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/catkin_ws/src/assignment_2_2022/scripts/NodeA.py" line="83" column="1" bodyfile="/root/catkin_ws/src/assignment_2_2022/scripts/NodeA.py" bodystart="83" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_node_a_1aa90a9376edad8ed76febe3f5b91cdc38" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def NodeA.cancel_target</definition>
+        <argsstring>()</argsstring>
+        <name>cancel_target</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Function that checks whether there is an active goal and allows to cancel it
+
+*Args*: None</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/catkin_ws/src/assignment_2_2022/scripts/NodeA.py" line="109" column="1" bodyfile="/root/catkin_ws/src/assignment_2_2022/scripts/NodeA.py" bodystart="109" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_node_a_1a0114dfa5d81f72006f4703ecd20afcb4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def NodeA.user_interface</definition>
+        <argsstring>()</argsstring>
+        <name>user_interface</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>*User Interface (UI)*
+The function is called at the start of the program
+The user can choose to set a goal, to cancel it or to exit the program by entering the correct number
+
+*Args*: None</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/catkin_ws/src/assignment_2_2022/scripts/NodeA.py" line="128" column="1" bodyfile="/root/catkin_ws/src/assignment_2_2022/scripts/NodeA.py" bodystart="128" bodyend="164"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>.. module:: NodeA
+   :platform: Unix
+   :synopsis: Python module for the second assignment of Research Track I course 
+   
+.. moduleauthor:: Manuel Delucchi
+
+A more detailed description of the node:
+
+This node implements an action client allowing the user to set a target (x,y) or to cancel it at any time. 
+Also it publishes the robot position and velocity as a custom message by reling on the topic /odom.  
+
+Subsribes to:
+/odom
+
+Publishes to:
+/pos_vel</verbatim> </para>
+    </detaileddescription>
+    <location file="/root/catkin_ws/src/assignment_2_2022/scripts/NodeA.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespace_node_b" kind="namespace" language="Python">
+    <compoundname>NodeB</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespace_node_b_1ab4166495ef39c5445df58568a4838b7c" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int NodeB.goals_cancelled</definition>
+        <argsstring></argsstring>
+        <name>goals_cancelled</name>
+        <initializer>=  0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/catkin_ws/src/assignment_2_2022/scripts/NodeB.py" line="26" column="1" bodyfile="/root/catkin_ws/src/assignment_2_2022/scripts/NodeB.py" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_node_b_1ae372dd963939787f294417df5a432dfc" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int NodeB.goals_reached</definition>
+        <argsstring></argsstring>
+        <name>goals_reached</name>
+        <initializer>=  0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/catkin_ws/src/assignment_2_2022/scripts/NodeB.py" line="27" column="1" bodyfile="/root/catkin_ws/src/assignment_2_2022/scripts/NodeB.py" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_node_b_1ac75fbf6205673ccab424d257c788564f" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>NodeB.sub_goal</definition>
+        <argsstring></argsstring>
+        <name>sub_goal</name>
+        <initializer>=  rospy.Subscriber(&quot;/reaching_goal/result&quot;, assignment_2_2022.msg.PlanningActionResult, <ref refid="namespace_node_b_1acf26fd11b9362ce4bfd49ca8905f94c1" kindref="member">status</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/catkin_ws/src/assignment_2_2022/scripts/NodeB.py" line="55" column="1" bodyfile="/root/catkin_ws/src/assignment_2_2022/scripts/NodeB.py" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespace_node_b_1acf26fd11b9362ce4bfd49ca8905f94c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def NodeB.status</definition>
+        <argsstring>(msg)</argsstring>
+        <name>status</name>
+        <param>
+          <type>msg</type>
+          <defname>msg</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Function that updates the number of goals reached or cancelled based on the status 
+
+*Args*: msg</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/root/catkin_ws/src/assignment_2_2022/scripts/NodeB.py" line="29" column="1" bodyfile="/root/catkin_ws/src/assignment_2_2022/scripts/NodeB.py" bodystart="29" bodyend="48"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>.. module:: NodeB
+   :platform: Unix
+   :synopsis: Python module for the second assignment of Research Track I course
+   
+.. moduleauthor:: Manuel Delucchi
+
+A more detailed description of the node:
+
+This node prints the number of target canceled and the number of target reached
+
+Subsribes to:
+/reaching_goal/result</verbatim> </para>
+    </detaileddescription>
+    <location file="/root/catkin_ws/src/assignment_2_2022/scripts/NodeB.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>
