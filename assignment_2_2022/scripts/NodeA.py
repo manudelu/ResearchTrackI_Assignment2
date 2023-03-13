@@ -14,9 +14,9 @@ from assignment_2_2022.msg import RobotMsg
 
 def callback(msg):
 	"""
-	Callback function to publish position and velocity of the robot
+	Callback function to publish position and velocity of the robot taken from /odom topic
 	
-	Args: msg
+	Args: msg (Odometry): Contains the odometry of the robot
 	"""
 	global pub
 	
@@ -33,17 +33,39 @@ def callback(msg):
 	if not rospy.is_shutdown():
 		pub.publish(my_custom_msg)
 
+def get_target():		
+	"""
+		Function that ask the user to set the x and y position of the target and check whether the input is valid
+		
+		Args: None
+	"""
+	while True:
+		try:
+			x_pos = float(input("Enter the x value: "))
+		except:
+			print("Please enter a valid number!!")			
+		else:
+			break
+			
+	while True:
+		try:
+			y_pos = float(input("Enter the y value: "))
+		except:
+			print("Please enter a valid number!!")			
+		else:			
+			break	
+			
+	return x_pos, y_pos
+
 def set_target():
 	"""
-	Function that allows the user to set the coordinates (x, y) of the target 
-	position that the robot must reach in the simulation environment
+	Function that allows the user to set the coordinates (x, y) of the target position that
+	the robot must reach inside the simulation environment and send the target (goal) to the action server
 	
 	Args: None
 	"""
-	
-	# Ask the user to set the x and y position of the target
-	x_pos = float(input("Enter the x value: "))
-	y_pos = float(input("Enter the y value: "))
+	# Get target position from the get_target() function defined above
+	(x_pos, y_pos) = get_target()
 	
 	# Print the selected coordinates 
 	print("The position of the target is: (", x_pos, ", ", y_pos, ")")
@@ -63,8 +85,7 @@ def set_target():
 
 def cancel_target():
 	"""
-	This function allows to cancel the goal that is sent to the action server
-	It is called as soon as the user select it as an option in the UI function
+	Function that checks whether there is an active goal and allows to cancel it
 	
 	Args: None
 	
@@ -85,8 +106,7 @@ def user_interface():
 	"""
 	User Interface (UI)
 	The function is called at the start of the program
-	The user can choose between different options by entering the correct number
-	If the option choosen is wrong then call again the UI
+	The user can choose to set a goal, to cancel it or to exit the program by entering the correct number
 	
 	Args: None
 	"""
