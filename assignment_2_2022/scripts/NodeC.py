@@ -1,5 +1,21 @@
 #! /usr/bin/env python3
 
+"""
+.. module:: NodeC
+   :platform: Unix
+   :synopsis: Python module for the second assignment of Research Track I course
+   
+.. moduleauthor:: Manuel Delucchi
+
+A more detailed description of the node:
+
+This node prints the robot speed and the distance from the desired target
+
+Subsribes to:
+	/pos_vel
+	
+"""
+
 import rospy
 import math
 
@@ -10,7 +26,9 @@ def callback_subscriber(msg):
 	"""
 	Function that calculates the distance between the robot and the goal and the speed of the robot
 	
-	Args: msg (RobotMsg): Contains the coordinates and velocity of the robot
+	*Args*: 
+	*msg(RobotMsg)*: Contains the coordinates and velocity of the robot
+	
 	"""
 	# Get the desired position from the ROS parameter server
 	des_pos_x = rospy.get_param("des_pos_x")

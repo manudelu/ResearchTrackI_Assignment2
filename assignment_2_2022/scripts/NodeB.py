@@ -1,5 +1,21 @@
 #! /usr/bin/env python3
 
+"""
+.. module:: NodeB
+   :platform: Unix
+   :synopsis: Python module for the second assignment of Research Track I course
+   
+.. moduleauthor:: Manuel Delucchi
+
+A more detailed description of the node:
+
+This node prints the number of target canceled and the number of target reached
+
+Subsribes to:
+	/reaching_goal/result
+	
+"""
+
 import rospy
 import actionlib
 import actionlib.msg
@@ -14,7 +30,8 @@ def status(msg):
 	"""
 	Function that updates the number of goals reached or cancelled based on the status 
 	
-	Args: msg
+	*Args*: msg
+	
 	"""
 	global goals_cancelled 
 	global goals_reached

@@ -1,5 +1,25 @@
 #! /usr/bin/env python3
 
+"""
+.. module:: NodeA
+   :platform: Unix
+   :synopsis: Python module for the second assignment of Research Track I course 
+   
+.. moduleauthor:: Manuel Delucchi
+
+A more detailed description of the node:
+
+This node implements an action client allowing the user to set a target (x,y) or to cancel it at any time. 
+Also it publishes the robot position and velocity as a custom message by reling on the topic /odom.  
+
+Subsribes to:
+	/odom
+	
+Publishes to:
+	/pos_vel
+	
+"""
+
 import rospy
 import os
 import actionlib
@@ -14,9 +34,11 @@ from assignment_2_2022.msg import RobotMsg
 
 def callback(msg):
 	"""
-	Callback function to publish position and velocity of the robot taken from /odom topic
+	Callback function to publish position and velocity of the robot taken from */odom* topic
 	
-	Args: msg (Odometry): Contains the odometry of the robot
+	*Args*: 
+	*msg(Odometry)*: Contains the odometry of the robot
+	
 	"""
 	global pub
 	
@@ -37,7 +59,8 @@ def get_target():
 	"""
 		Function that ask the user to set the x and y position of the target and check whether the input is valid
 		
-		Args: None
+		*Args*: None
+		
 	"""
 	while True:
 		try:
@@ -62,7 +85,7 @@ def set_target():
 	Function that allows the user to set the coordinates (x, y) of the target position that
 	the robot must reach inside the simulation environment and send the target (goal) to the action server
 	
-	Args: None
+	*Args*: None
 	"""
 	# Get target position from the get_target() function defined above
 	(x_pos, y_pos) = get_target()
@@ -87,7 +110,7 @@ def cancel_target():
 	"""
 	Function that checks whether there is an active goal and allows to cancel it
 	
-	Args: None
+	*Args*: None
 	
 	"""
 	# If there is an active goal then cancel it
@@ -104,11 +127,12 @@ def cancel_target():
 
 def user_interface():
 	"""
-	User Interface (UI)
+	*User Interface (UI)*
 	The function is called at the start of the program
 	The user can choose to set a goal, to cancel it or to exit the program by entering the correct number
 	
-	Args: None
+	*Args*: None
+	
 	"""
 	# Clean the screen 
 	os.system('clear')
