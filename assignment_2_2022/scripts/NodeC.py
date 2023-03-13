@@ -7,7 +7,11 @@ from assignment_2_2022.msg import RobotMsg
 
 
 def callback_subscriber(msg):
-
+	"""
+	Function that calculates the distance between the robot and the goal and the speed of the robot
+	
+	Args: msg (RobotMsg): Contains the coordinates and velocity of the robot
+	"""
 	# Get the desired position from the ROS parameter server
 	des_pos_x = rospy.get_param("des_pos_x")
 	des_pos_y = rospy.get_param("des_pos_y")

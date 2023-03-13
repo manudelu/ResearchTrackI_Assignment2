@@ -11,6 +11,11 @@ goals_cancelled = 0
 goals_reached = 0
 
 def status(msg):
+	"""
+	Function that updates the number of goals reached or cancelled based on the status 
+	
+	Args: msg
+	"""
 	global goals_cancelled 
 	global goals_reached
 	
